@@ -1,13 +1,22 @@
-<template>
-  <div>
-    <nuxt />
-  </div>
+<template lang="pug">
+  div
+    Menu
+    nuxt
 </template>
+<script>
+import Menu from '~/components/Menu.vue'
+export default {
+  components: {
+    Menu
+  }
+}
+</script>
+
 
 <style lang="scss">
-@import "~/assets/scss/normalize.scss";
-@import "~/assets/scss/variables.scss";
-@import "~/assets/scss/mixin.scss";
+@import "~/assets/style/normalize.scss";
+@import "~/assets/style/variables.scss";
+@import "~/assets/style/mixin.scss";
 
 html{
   font-family: $noto-font, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -29,6 +38,7 @@ body {
   margin: 0;
 }
 a:link,a:visited {
+  color: $theme-sky;
   text-decoration: none;
 }
 :focus {
