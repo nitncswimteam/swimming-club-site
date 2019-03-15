@@ -10,7 +10,7 @@
 @import "~/assets/scss/mixin.scss";
 
 html{
-  font-family: $noto-font, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: $noto-font, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 62.5%;
   color: $theme-blue;
   box-sizing: border-box;
