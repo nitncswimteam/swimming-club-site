@@ -47,6 +47,11 @@ export default {
     display: block;
     width: auto;
     height: 48px;
+    opacity: 1;
+    transition: .3s $bezier-ease-out;
+    &:hover{
+      opacity: .7;
+    }
   }
 }
 .navigation {
