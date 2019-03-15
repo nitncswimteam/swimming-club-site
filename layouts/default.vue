@@ -31,6 +31,16 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  @include noto-font(1.5rem);
+}
+
+.container {
+  width: calc(100% - 120px);
+  margin: auto;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 *, *:before, *:after {
