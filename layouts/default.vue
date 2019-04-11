@@ -12,7 +12,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss">
 @import "~/assets/style/normalize.scss";
 @import "~/assets/style/variables.scss";

@@ -1,4 +1,7 @@
 <template lang="pug">
+mixin linkButton(link,text)
+  .link-button
+    nuxt-link(to="")
 .index
   header
     .title
@@ -11,7 +14,11 @@
           .message-wrapper
             .message
               p(v-for="intro_text in index.intro_text" v-html="intro_text")
-            .link-button
+            .link-button-wrapper
+              .link-button: nuxt-link(to="/about")
+                .lb-innerBox: .lb-innerText ABOUTページへ
+              .link-button: a(href="") 
+                .lb-innerBox: .lb-innerText 水泳部ブログはこちら
           .photo
             img(:src="`../image/${index.image_file_name}`")
               
@@ -74,6 +81,7 @@ section {
   .message-wrapper{
     width: 100%;
     padding-right: 60px;
+    overflow: auto;
   }
   .message{
     padding: 28px;
@@ -83,10 +91,44 @@ section {
       margin-bottom: 1.6rem;
     }
   }
+  .link-button-wrapper{
+    width: auto;
+    float: right;
+  }
+  .link-button {
+    width: min-content;
+    height: auto;
+    background-color: $theme-blue;
+    margin: 10px;
+    transition: .3s $bezier-ease-out;
+    .lb-innerBox {
+      width: 300px - (48px * 2);
+      height: 60px;
+      margin: 0 48px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      background-color: $theme-blue;
+      transition: .3s $bezier-ease-out;
+      .lb-innerText {
+        width: auto;
+        height: auto;
+        color: #fff;
+        font-size: 1.8rem;
+      }
+    }
+    &:hover {
+      background-color: $accent-red;
+      .lb-innerBox{
+        background-color: $accent-red;
+      }
+    }
+  }
   .photo {
-    width: 800px;
+    width: 120%;
     img{
-      width: 800px;
+      width: 100%;
       height: auto;
     }
   }
