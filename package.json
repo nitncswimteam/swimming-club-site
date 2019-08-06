@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0"
+    "nuxt": "^2.4.0",
+    "processmd": "^4.4.2"
   },
   "devDependencies": {
     "mathsass": "^0.10.1",
