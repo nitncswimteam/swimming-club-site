@@ -1,18 +1,18 @@
 <template lang="pug">
 .menu
-  .logo: nuxt-link(to="./")
+  .logo: nuxt-link(to="/")
     img.top-logo(src="~/assets/imgs/logo.svg")
   nav.navigation
-    .nav-item: nuxt-link(to="./about")
+    .nav-item: nuxt-link(to="/about")
       .nav-item-text ABOUT
       .nav-item-wave: img(src="~/assets/imgs/wave_white.svg")
-    .nav-item: nuxt-link(to="./gallery")
+    .nav-item: nuxt-link(to="/gallery")
       .nav-item-text GALLERY
       .nav-item-wave: img(src="~/assets/imgs/wave_white.svg")
-    .nav-item: nuxt-link(to="./results")
+    .nav-item: nuxt-link(to="/results")
       .nav-item-text RESULTS
       .nav-item-wave: img(src="~/assets/imgs/wave_white.svg")
-    .nav-item: nuxt-link(to="./news")
+    .nav-item: nuxt-link(to="/news")
       .nav-item-text NEWS
       .nav-item-wave: img(src="~/assets/imgs/wave_white.svg")
     
