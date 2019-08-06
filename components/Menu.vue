@@ -9,8 +9,8 @@
     .nav-item: nuxt-link(to="./gallery")
       .nav-item-text GALLERY
       .nav-item-wave: img(src="~/assets/imgs/wave_white.svg")
-    .nav-item: nuxt-link(to="./result")
-      .nav-item-text RESULT
+    .nav-item: nuxt-link(to="./results")
+      .nav-item-text RESULTS
       .nav-item-wave: img(src="~/assets/imgs/wave_white.svg")
     .nav-item: nuxt-link(to="./news")
       .nav-item-text NEWS

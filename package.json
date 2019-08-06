@@ -5,10 +5,10 @@
   "author": "chige12",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt generate"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
