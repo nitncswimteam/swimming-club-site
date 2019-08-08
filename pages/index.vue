@@ -1,7 +1,7 @@
 <template lang="pug">
 mixin linkButton(link,text)
-  .link-button
-    nuxt-link(to="")
+  .link-button: nuxt-link(to=link)
+    .lb-innerBox: .lb-innerText=text
 .index
   header
     .title
@@ -15,10 +15,8 @@ mixin linkButton(link,text)
             .message
               p(v-for="intro_text in index.intro_text" v-html="intro_text")
             .link-button-wrapper
-              .link-button: nuxt-link(to="/about")
-                .lb-innerBox: .lb-innerText ABOUTページへ
-              .link-button: a(href="") 
-                .lb-innerBox: .lb-innerText 水泳部ブログはこちら
+              +linkButton('/about','ABOUTページへ')
+              +linkButton('/about','水泳部ブログはこちら')
           .photo
             img(:src="`../image/${index.image_file_name}`")
               
@@ -96,10 +94,15 @@ section {
     float: right;
   }
   .link-button {
+    position: relative;
     width: min-content;
     height: auto;
-    background-color: $theme-blue;
     margin: 10px;
+    background-color: $theme-blue;
+    background-image: url("~assets/imgs/wave_white.svg");
+    background-repeat: repeat-x;
+    background-size: 100px 30px;
+    background-position: 0 center;
     transition: .3s $bezier-ease-out;
     .lb-innerBox {
       width: 300px - (48px * 2);
@@ -111,6 +114,7 @@ section {
       justify-content: center;
       background-color: $theme-blue;
       transition: .3s $bezier-ease-out;
+      z-index: 1;
       .lb-innerText {
         width: auto;
         height: auto;
@@ -120,6 +124,7 @@ section {
     }
     &:hover {
       background-color: $accent-red;
+      animation: leftSlide 4s linear infinite;
       .lb-innerBox{
         background-color: $accent-red;
       }
@@ -132,5 +137,10 @@ section {
       height: auto;
     }
   }
+}
+
+@keyframes leftSlide {
+  0%    { background-position: 0px center;  }
+  100%  { background-position: -100px center;  }
 }
 </style>
