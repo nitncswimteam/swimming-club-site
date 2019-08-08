@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     Menu
-    nuxt
+    nuxt.nuxt
     Footer
 </template>
 <script>
@@ -57,5 +57,9 @@ a:link,a:visited {
 }
 :focus {
   outline: none;
+}
+
+.nuxt{
+  min-height: 500px;
 }
 </style>

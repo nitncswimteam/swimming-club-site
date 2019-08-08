@@ -1,7 +1,7 @@
 {
   "name": "swimming_club_site",
   "version": "1.0.0",
-  "description": "My legendary Nuxt.js project",
+  "description": "奈良高専水泳部の公式サイトです！",
   "author": "chige12",
   "private": true,
   "scripts": {

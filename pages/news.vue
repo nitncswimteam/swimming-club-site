@@ -21,6 +21,18 @@ export default {
     return {
       summaryJson: summaryJson
     }
+  },
+  head() {
+    const title = `NEWS｜奈良高専水泳部`;
+    const url = `https://nitnc_swim.netlify.com/news/`;
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:url', property: 'og:url', content: url },
+        { hid: 'og:title', property: 'og:title', content: title },
+      ],
+      link: [{ rel: 'canonical', href: url }],
+    };
   }
 }
 </script>
