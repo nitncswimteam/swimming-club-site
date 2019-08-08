@@ -2,6 +2,10 @@
 mixin linkButton(link,text)
   .link-button: nuxt-link(to=link)
     .lb-innerBox: .lb-innerText=text
+mixin littleLinkButton(link,text)
+  .little-link-button: nuxt-link(to=link)
+    .little-lb-innerBox: .little-lb-innerText=text
+
 .index
   header
     .title
@@ -19,17 +23,52 @@ mixin linkButton(link,text)
               +linkButton('/about','水泳部ブログはこちら')
           .photo
             img(:src="`../image/${index.image_file_name}`")
-              
-    section
+    section.cushion
+      img.cushion_img(src="~/assets/imgs/pool_course.png")
+    section.little_results_news
+      .container
+        .little_lists.little_results
+          .list_title RESULTS
+          ul.lists
+            li.list(v-for="(results_data,results_key) in resultsDatas" :key="`topresult_${results_key}`")
+              nuxt-link(:to="`/results_page/${results_data.sourceBase.slice(0,-3)}`").list_wrapper
+                .created_at {{results_data.created_at.split('T')[0].split('-').join('/')}} 更新
+                .article_title {{results_data.title}}
+          .read_more: +littleLinkButton('/results','READ MORE')
+        .little_lists.little_news
+          .list_title NEWS
+          ul.lists
+            li.list(v-for="(news_data,news_key) in newsDatas" :key="`topresult_${news_key}`")
+              nuxt-link(:to="`/news_page/${news_data.sourceBase.slice(0,-3)}`").list_wrapper
+                .created_at {{news_data.created_at.split('T')[0].split('-').join('/')}} 更新
+                .article_title {{news_data.title}}
+          .read_more: +littleLinkButton('/news','READ MORE')
   footer
 </template>
 
 <script>
+import summaryNews from '~/contents/summary_news.json';
+import summaryResults from '~/contents/summary_results.json';
 import index_json from '~/assets/jsons/index.json'
 export default {
   data(){
     return{
       index:index_json
+    }
+  },
+  methods:{
+    dataFormating(data,n){
+      let summaryJsonMap = Object.entries(data.fileMap).map(([key, value]) => ({key, ...value}));
+      let deleteNoDisplayArray = summaryJsonMap.filter(x => x.publish === true);
+      return deleteNoDisplayArray.slice(0,n-1)
+    }
+  },
+  computed:{
+    newsDatas(){
+      return this.dataFormating(summaryNews,3)
+    },
+    resultsDatas(){
+      return this.dataFormating(summaryResults,3)
     }
   }
 }
@@ -38,6 +77,8 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/style/variables.scss";
 @import "~/assets/style/mixin.scss";
+@import "~/assets/style/button.scss";
+
 header {
   width: 100%;
   height: 340px;
@@ -93,43 +134,6 @@ section {
     width: auto;
     float: right;
   }
-  .link-button {
-    position: relative;
-    width: min-content;
-    height: auto;
-    margin: 10px;
-    background-color: $theme-blue;
-    background-image: url("~assets/imgs/wave_white.svg");
-    background-repeat: repeat-x;
-    background-size: 100px 30px;
-    background-position: 0 center;
-    transition: .3s $bezier-ease-out;
-    .lb-innerBox {
-      width: 300px - (48px * 2);
-      height: 60px;
-      margin: 0 48px;
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: center;
-      background-color: $theme-blue;
-      transition: .3s $bezier-ease-out;
-      z-index: 1;
-      .lb-innerText {
-        width: auto;
-        height: auto;
-        color: #fff;
-        font-size: 1.8rem;
-      }
-    }
-    &:hover {
-      background-color: $accent-red;
-      animation: leftSlide 4s linear infinite;
-      .lb-innerBox{
-        background-color: $accent-red;
-      }
-    }
-  }
   .photo {
     width: 120%;
     img{
@@ -139,8 +143,65 @@ section {
   }
 }
 
-@keyframes leftSlide {
-  0%    { background-position: 0px center;  }
-  100%  { background-position: -100px center;  }
+.cushion{
+  width: 100%;
+  .cushion_img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.little_lists{
+  width: 860px;
+  margin: auto;
+  margin-top: 20px;
+
+  .list_title{
+    position: relative;
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 36px;
+    letter-spacing: .1rem;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      display: block;
+      width: 92px;
+      height: 4px;
+      background-image: url("~assets/imgs/wave_blue.svg");
+      background-size: 92px 4px;
+      background-repeat: no-repeat;
+    }
+  }
+  .lists{
+    list-style: none;
+  }
+  .list_wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 12px;
+    color: $theme-blue;
+    transition: .2s $bezier-ease-out;
+    &:hover{
+      color: $theme-sky;
+    }
+  }
+  .created_at{
+    line-height: 3rem;
+    padding-right: 30px;
+  }
+  .article_title{
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .read_more{
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 </style>
