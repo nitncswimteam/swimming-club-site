@@ -2,12 +2,17 @@
   div
     Menu
     nuxt
+    Footer
 </template>
 <script>
+//components
 import Menu from '~/components/Menu.vue'
+import Footer from '~/components/Footer.vue'
+
 export default {
   components: {
-    Menu
+    Menu,
+    Footer
   }
 }
 </script>

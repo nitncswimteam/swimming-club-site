@@ -43,13 +43,14 @@ mixin littleLinkButton(link,text)
                 .created_at {{news_data.created_at.split('T')[0].split('-').join('/')}} 更新
                 .article_title {{news_data.title}}
           .read_more: +littleLinkButton('/news','READ MORE')
-  footer
 </template>
 
 <script>
+//json
 import summaryNews from '~/contents/summary_news.json';
 import summaryResults from '~/contents/summary_results.json';
 import index_json from '~/assets/jsons/index.json'
+
 export default {
   data(){
     return{
