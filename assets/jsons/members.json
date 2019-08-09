@@ -1,0 +1,59 @@
+{
+  "update":"2018/11/01 現在",
+  "number":{
+    "all":29,
+    "male":21,
+    "female":5,
+    "othergender":0,
+    "manager":3,
+    "teacher":5
+  },
+  "list":[
+    {
+      "name":"榊　和馬",
+      "grade":"3年",
+      "department":"機械工学科",
+      "position":"部長"
+    },
+    {
+      "name":"玉井　雄策",
+      "grade":"3年",
+      "department":"機械工学科",
+      "position":"副部長"
+    },
+    {
+      "name":"林　真由",
+      "grade":"3年",
+      "department":"機械工学科",
+      "position":"副部長/MG"
+    },
+    {
+      "name":"誰かa",
+      "grade":"3年",
+      "department":"工学科",
+      "position":"会計"
+    },
+    {
+      "name":"誰かb",
+      "grade":"3年",
+      "department":"工学科",
+      "position":"MG"
+    },
+    {
+      "name":"誰かc",
+      "grade":"3年",
+      "department":"工学科"
+    },
+    {
+      "name":"誰かd",
+      "grade":"3年",
+      "department":"工学科"
+    },
+    {
+      "name":"誰かe",
+      "grade":"3年",
+      "department":"工学科",
+      "position":"ブログ担当"
+    }
+  ]
+}

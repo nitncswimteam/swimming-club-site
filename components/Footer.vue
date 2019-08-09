@@ -22,7 +22,7 @@ footer
         .links
           .links_title LINKS
           ul.links_list
-            li.link(v-for="(link,link_id) in links" :key="`footerlinks_${links_id}`")
+            li.link(v-for="(link,link_id) in links" :key="`footerlinks_${link_id}`")
               a(:href="link.url").link_url
                 .link_text {{link.text}}
 
