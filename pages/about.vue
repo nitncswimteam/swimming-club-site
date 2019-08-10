@@ -1,7 +1,6 @@
 <template lang="pug">
 .about
-  header
-
+  MiniHeader(:name="'ABOUT'" :title="'水泳部について'")
   main
     .container
       .about_wrapper
@@ -11,7 +10,8 @@
               p(v-for="(prg,prg_id) in toptext" :key="`about_prg_${prg_id}`") {{prg}}
           .main_activities
             h2.header2
-              .header2_title 今後の主な活動
+              .header2_wrapper
+                .header2_title 今後の主な活動
               .naminami: img(src="~/assets/imgs/wave_blue.svg").naminami_img
             .contents_wrapper
               ul.activities_lists
@@ -25,7 +25,7 @@
                 .header2_sub {{members.update}}
               .naminami: img(src="~/assets/imgs/wave_blue.svg").naminami_img
             .contents_wrapper
-              Members(:members="members")
+              Members(:members="members").members_com
 
         .right_wrapper
           .photo_lists
@@ -40,11 +40,13 @@
 import about_json from '~/assets/jsons/about.json'
 import members_json from '~/assets/jsons/members.json'
 //component
+import MiniHeader from '~/components/MiniHeader.vue'
 import Members from '~/components/Members.vue'
 
 export default {
   components: {
-    Members
+    Members,
+    MiniHeader
   },
   data(){
     return{
@@ -75,14 +77,64 @@ export default {
 .about_wrapper{
   display: flex;
   flex-wrap: nowrap;
+  margin: 48px 0;
+  @include noto-font(1.8rem);
 }
 .left_wrapper{
-  flex-grow: 1
+  flex-grow: 1;
+  padding-left: 24px;
 }
 .right_wrapper{
-  flex-grow: 0
+  flex-grow: 0;
 }
 
+.top_text {
+  .top_text_box {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+
+.header2 {
+  margin-top: 60px;
+  margin-bottom: 38px;
+}
+.header2_wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.header2_title {
+  @include noto-font(2.6rem);
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+.header2_sub {
+  @include noto-font(1.6rem);
+  font-weight: normal;
+  padding-left: 20px;
+}
+.naminami{
+  margin-top: 4px;
+  .naminami_img{
+    display: block;
+    width: 92px;
+    height: 4px;
+  }
+}
+
+.activities_list {
+  margin: 4px 0;
+}
+.act_discription {
+  padding-left: 24px;
+  @include noto-font(1.6rem);
+}
+
+.members_com {
+  margin-left: 20px;
+}
 
 .photo_list{
   position: relative;
@@ -104,6 +156,6 @@ export default {
 }
 .about_imgs{
   display: block;
-  width: 500px;
+  width: 640px;
 }
 </style>
