@@ -19,8 +19,10 @@ mixin littleLinkButton(link,text)
             .message
               p(v-for="intro_text in index.intro_text" v-html="intro_text")
             .link-button-wrapper
-              +linkButton('/about','ABOUTページへ')
-              +linkButton('/about','水泳部ブログはこちら')
+              .link-button: nuxt-link(to="/about")
+                .lb-innerBox: .lb-innerText ABOUTページへ
+              .link-button: a(:href="index.blog")
+                .lb-innerBox: .lb-innerText 水泳部ブログはこちら
           .photo
             img(:src="`../image/${index.image_file_name}`")
     section.cushion
