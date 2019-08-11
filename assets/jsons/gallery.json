@@ -1,5 +1,12 @@
 [
   {
+    "type": "youtube",
+    "video_id": "HqBVtnb-dy0",
+    "title": "奈良高専水泳部紹介ムービー2019",
+    "body": "youtubeにて公開している紹介ムービーです！ ※音が出ます",
+    "date": "2019/04/12"
+  },
+  {
     "type": "image",
     "file": "pool.jpeg",
     "title": "本校のプール",
@@ -61,5 +68,12 @@
     "title": "賞状！",
     "body": "表彰台おめでとう!!",
     "date": "2019/06/30"
+  },
+  {
+    "type": "youtube",
+    "video_id": "yP39CmkQxI0",
+    "title": "奈良高専水泳部紹介ムービー2018",
+    "body": "youtubeにて公開している紹介ムービーです！ ※音が出ます",
+    "date": "2019/04/07"
   }
 ]

@@ -10,15 +10,16 @@
           :key="`gallery_card_${i}`"
           :photo="x" :id="i"
           @openDetail="openDetail"
-          v-if="x.type=='image'"
           )
   transition
     .gallery_detail(v-if="detail")
       .detail_wrapper
         GalleryImg(:src="`/image/gallery/${detail.file}`", :alt="detail.title" v-if="detail.type=='image'").image
+        iframe( v-if="detail.type=='youtube'" :src="`https://www.youtube.com/embed/${detail.video_id}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).video
         .detail_title {{detail.title}}
         .detail_body {{detail.body}}
-          .detail_date(v-if="detail.date") {{(detail.body?' ｜ ':'') + detail.date}} 撮影
+          .detail_date(v-if="(detail.date) && (detail.type=='image')") {{(detail.body?' ｜ ':'') + detail.date}} 撮影
+          .detail_date(v-if="(detail.date) && (detail.type=='youtube')") {{(detail.body?' ｜ ':'') + detail.date}} 公開
       img(src="~/assets/imgs/arrow.svg" @click="prevDetail(now_id)").detail_arrow.detail_arrow_left
       img(src="~/assets/imgs/arrow.svg" @click="nextDetail(now_id)").detail_arrow.detail_arrow_right
       img(src="~/assets/imgs/batsu.svg" @click="closeDetail(now_id)").detail_close
@@ -135,6 +136,13 @@ export default {
     .image{
       width: 100%;
       height: 100%;
+      object-fit: contain;
+    }
+    .video{
+      width: 90%;
+      height: 100%;
+      margin: auto;
+      display: block;
       object-fit: contain;
     }
   }

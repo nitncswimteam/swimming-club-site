@@ -18,8 +18,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/style/normalize.scss";
-@import "~/assets/style/variables.scss";
-@import "~/assets/style/mixin.scss";
+
 
 </style>

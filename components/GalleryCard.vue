@@ -1,8 +1,10 @@
 <template lang="pug">
   .gallery_card
     .gallery_button(@click="openDetail")
-      figure.card_img
+      figure.card_img(v-if="photo.type=='image'")
         GalleryImg(:src="`/image/gallery/${photo.file}`", :alt="photo.title").image
+      .card_img(v-if="photo.type=='youtube'")
+        img(:src="`https://img.youtube.com/vi/${photo.video_id}/sddefault.jpg`" :alt="photo.title").image
       .card_content
         .title {{photo.title}}
         .body {{photo.body}}
