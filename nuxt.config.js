@@ -33,6 +33,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: "~/plugins/vue-lazy-load", mode: 'client'}
   ],
 
   /*

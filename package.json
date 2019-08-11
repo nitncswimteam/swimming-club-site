@@ -13,7 +13,9 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
-    "processmd": "^4.4.2"
+    "processmd": "^4.4.2",
+    "vue-lazyload": "^1.3.2",
+    "vue-magic-grid": "^0.0.4"
   },
   "devDependencies": {
     "mathsass": "^0.10.1",
