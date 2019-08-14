@@ -63,7 +63,12 @@ export default {
     dataFormating(data,n){
       let summaryJsonMap = Object.entries(data.fileMap).map(([key, value]) => ({key, ...value}));
       let deleteNoDisplayArray = summaryJsonMap.filter(x => x.publish === true);
-      return deleteNoDisplayArray.slice(0,n-1)
+      deleteNoDisplayArray.sort(function(a,b){
+          if(a.created_at < b.created_at) return 1;
+          if(a.created_at > b.created_at) return -1;
+          return 0;
+      });
+      return deleteNoDisplayArray.slice(0,n)
     }
   },
   computed:{

@@ -5,10 +5,11 @@
   "author": "chige12",
   "private": true,
   "scripts": {
-    "dev": "processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt",
+    "post": "rm -r contents/_output_file && processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news output --watch > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results output --watch > contents/summary_results.json",
+    "dev": "rm -r contents/_output_file && processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt generate"
+    "generate": "rm -r contents/_output_file && processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt generate"
   },
   "dependencies": {
     "cross-env": "^5.2.0",

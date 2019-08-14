@@ -4,7 +4,7 @@
     .article_created_at {{createdAt}} 作成
     .article_text
       .article_title {{list.title}}
-      .article_place(v-if="list.place") {{list.place}}
+      .article_place(v-if="list.place") @{{list.place}}
 </template>
 <script>
 export default {

@@ -16,21 +16,31 @@ export default {
   components:{
     ArticleLink
   },
+  methods:{
+    sort(array){
+      return array.sort(function(a,b){
+        if(a.created_at < b.created_at) return 1;
+        if(a.created_at > b.created_at) return -1;
+        return 0;
+      });
+    }
+  },
   computed:{
     articles(){
       let summaryJsonMap = Object.entries(this.summaryJson.fileMap).map(([key, value]) => ({key, ...value}))
       let eachYears = summaryJsonMap.map((sJM) => sJM.created_at.slice(0,4) )
       let eachYearsOne = eachYears.filter((x,i,self) => self.indexOf(x)===i )
+      let sortedEachYearsOne = eachYearsOne.sort((a,b) => {
+          if(a<b) return 1;
+          if(a>b) return -1;
+        })
+      console.log(sortedEachYearsOne)
 
       let eachYearsSummary = []
-      for (let i = 0; i < eachYearsOne.length; i++) {
-        let listOfEachYear = summaryJsonMap.filter((x) => x.created_at.slice(0,4) == eachYearsOne[i])
-        let filterdListOfEachYear = listOfEachYear.sort(function(a,b){
-          if(a.created_at < b.created_at) return -1;
-          if(a.created_at > b.created_at) return 1;
-          return 0;
-        });
-        eachYearsSummary.push({year: eachYearsOne[i],list:listOfEachYear})
+      for (let i = 0; i < sortedEachYearsOne.length; i++) {
+        let listOfEachYear = summaryJsonMap.filter((x) => x.created_at.slice(0,4) == sortedEachYearsOne[i])
+        let sortedListOfEachYear = this.sort(listOfEachYear)
+        eachYearsSummary.push({year: sortedEachYearsOne[i],list:sortedListOfEachYear})
       }
       return eachYearsSummary
       //this.$store.commit('articles_${this.type}',eachYearsSummary)
@@ -47,6 +57,10 @@ export default {
 .articles {
   margin: 12px 0;
   padding: 0 16px;
+}
+
+.article_year{
+  margin-bottom: 36px;
 }
 
 .article_year_box {

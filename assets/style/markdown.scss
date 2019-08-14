@@ -1,14 +1,7 @@
-a {
-  color: #0645ad;
-  text-decoration: none;
-}
 
-a:visited {
-  color: #0b0080;
-}
 
 a:hover {
-  color: #06e;
+  color: $theme-blue;
 }
 
 a:active {
@@ -24,26 +17,6 @@ a:active {
   outline: 0;
 }
 
-::-moz-selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #000;
-}
-
-::selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #000;
-}
-
-a::-moz-selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #0645ad;
-}
-
-a::selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #0645ad;
-}
-
 p {
   margin: 1em 0;
 }
@@ -52,15 +25,9 @@ img {
   max-width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-  color: #111;
-  line-height: 1em;
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.5;
+  margin: 3rem 0 1rem;
 }
 
 h4,
@@ -70,41 +37,41 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 2rem;
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.7rem;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 1.5rem;
 }
 
 h6 {
-  font-size: 0.9em;
+  font-size: 1.4rem;
 }
 
 blockquote {
   color: #666666;
   margin: 0;
-  padding-left: 3em;
+  padding-left: 2em;
   border-left: 0.5em #eee solid;
 }
 
 hr {
   display: block;
   border: 0;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid $theme-blue;
+  border-bottom: 1px solid rgba($theme-blue, .5);
   margin: 1em 0;
   padding: 0;
 }
@@ -113,16 +80,24 @@ pre,
 code,
 kbd,
 samp {
-  color: #000;
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
-  font-size: 0.98em;
+  font-size: 1.3rem;
+  border-radius: 6px;
+}
+
+code {
+  padding: 4px 6px;
+  display: inline-block;
+  background: #ddd;
 }
 
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  background: #ddd;
+  margin: 12px 0;
 }
 
 b,
@@ -136,13 +111,11 @@ dfn {
 
 ins {
   background: #ff9;
-  color: #000;
   text-decoration: none;
 }
 
 mark {
   background: #ff0;
-  color: #000;
   font-style: italic;
   font-weight: bold;
 }
@@ -165,8 +138,8 @@ sub {
 
 ul,
 ol {
-  margin: 1em 0;
-  padding: 0 0 0 2em;
+  margin: 1rem 0;
+  padding: 0 0 0 2rem;
 }
 
 li p:last-child {
@@ -186,10 +159,27 @@ img {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 20px 0;
+}
+
+tr {
+  &:nth-child(2n-1){
+    background-color: rgba($theme-blue,.06);
+  }
+}
+
+th {
+  border-top: 3px solid $theme-blue;
+  border-bottom: 3px solid $theme-blue;
+  background: #fff;
+  padding: 4px 16px0;
 }
 
 td {
   vertical-align: top;
+  border-top: 1px solid $theme-blue;
+  border-bottom: 1px solid $theme-blue;
+  padding: 4px 16px;
 }
 
 @media only screen and (min-width: 480px) {

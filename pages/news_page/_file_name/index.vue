@@ -35,11 +35,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~/assets/style/normalize.scss";
 @import "~/assets/style/variables.scss";
 @import "~/assets/style/mixin.scss";
-.body{
+.news_one_page .body {
   @import "~/assets/style/markdown.scss";
 }
 </style>
