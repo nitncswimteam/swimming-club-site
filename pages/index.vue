@@ -24,7 +24,7 @@ mixin littleLinkButton(link,text)
               .link-button: a(:href="index.blog")
                 .lb-innerBox: .lb-innerText 水泳部ブログはこちら
           .photo
-            img(:src="`../image/${index.image_file_name}`")
+            img(:src="`../image/top/${index.image_file_name}`")
     section.cushion
       img.cushion_img(src="~/assets/imgs/pool_course.png")
     section.little_results_news
