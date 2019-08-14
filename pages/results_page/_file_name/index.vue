@@ -1,19 +1,26 @@
 <template lang="pug">
-.results_one_page(v-if="publish")
+.results_one_page
+  MiniHeader(:name="'RESULTS'" :title="'大会結果報告'")
   .container
     nuxt-link(to="/results").back 戻る
-    h1 {{title}}
-    .post-meta
-      .time {{created_at.split('T')[0]}}
-      .body(v-html="bodyHtml")
+    .contents(v-if="publish")
+      h1 {{title}}
+      .post-meta
+        .time {{created_at.split('T')[0]}}
+        .body(v-html="bodyHtml")
 
-.results_one_page(v-else="publish")
-  p お探しのページは見つかりません。
+    .contents(v-else="publish")
+      p お探しのページは見つかりません。
 </template>
 <script>
 import summaryJson from '~/contents/summary_results.json';
+//component
+import MiniHeader from '~/components/MiniHeader.vue'
 
 export default {
+  components: {
+    MiniHeader
+  },
   validate({ params }) {
     return summaryJson.sourceFileArray.includes(`contents/results/${params.file_name.slice(0,4)}/${params.file_name}.md`);
   },

@@ -1,19 +1,26 @@
 <template lang="pug">
-.news_one_page(v-if="publish")
+.news_one_page
+  MiniHeader(:name="'NEWS'" :title="'お知らせ'")
   .container
     nuxt-link(to="/news").back 戻る
-    h1 {{title}}
-    .post-meta
-      .time {{created_at.split('T')[0]}}
-      .body(v-html="bodyHtml")
+    .contents(v-if="publish")
+      h1 {{title}}
+      .post-meta
+        .time {{created_at.split('T')[0]}}
+        .body(v-html="bodyHtml")
 
-.news_one_page(v-else="publish")
-  p お探しのページは見つかりません。
+    .contents(v-else="publish")
+      p お探しのページは見つかりません。
 </template>
 <script>
 import summaryJson from '~/contents/summary_news.json';
+//component
+import MiniHeader from '~/components/MiniHeader.vue'
 
 export default {
+  components: {
+    MiniHeader
+  },
   validate({ params }) {
     return summaryJson.sourceFileArray.includes(`contents/news/${params.file_name.slice(0,4)}/${params.file_name}.md`);
   },
