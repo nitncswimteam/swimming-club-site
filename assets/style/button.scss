@@ -67,7 +67,7 @@
   }
   &:hover {
     background-color: $accent-red;
-    animation: leftSlide 6s linear infinite;
+    animation: leftSlideLittle 6s linear infinite;
     .little-lb-innerBox{
       background-color: $accent-red;
     }
@@ -76,5 +76,9 @@
 
 @keyframes leftSlide {
   0%    { background-position: 0px center;  }
-  100%  { background-position: -100px center;  }
+  100%  { background-position: -92px center;  }
+}
+@keyframes leftSlideLittle {
+  0%    { background-position: 0px center;  }
+  100%  { background-position: -70px center;  }
 }

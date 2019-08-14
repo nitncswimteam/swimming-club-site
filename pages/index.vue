@@ -34,7 +34,7 @@ mixin littleLinkButton(link,text)
           ul.lists
             li.list(v-for="(results_data,results_key) in resultsDatas" :key="`topresult_${results_key}`")
               nuxt-link(:to="`/results_page/${results_data.sourceBase.slice(0,-3)}`").list_wrapper
-                .created_at {{results_data.created_at.split('T')[0].split('-').join('/')}} 更新
+                .created_at {{results_data.created_at.split('T')[0].split('-').join('/')}} 作成
                 .article_title {{results_data.title}}
           .read_more: +littleLinkButton('/results','READ MORE')
         .little_lists.little_news
@@ -42,7 +42,7 @@ mixin littleLinkButton(link,text)
           ul.lists
             li.list(v-for="(news_data,news_key) in newsDatas" :key="`topresult_${news_key}`")
               nuxt-link(:to="`/news_page/${news_data.sourceBase.slice(0,-3)}`").list_wrapper
-                .created_at {{news_data.created_at.split('T')[0].split('-').join('/')}} 更新
+                .created_at {{news_data.created_at.split('T')[0].split('-').join('/')}} 作成
                 .article_title {{news_data.title}}
           .read_more: +littleLinkButton('/news','READ MORE')
 </template>

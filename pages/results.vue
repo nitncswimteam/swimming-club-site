@@ -1,18 +1,24 @@
 <template lang="pug">
 .results
-  header
-    .title
+  MiniHeader(:name="'RESULTS'" :title="'大会結果報告'")
   main
-    ArticleList(:summaryJson="summaryJson" :type="'results'")
+    .container
+      .top_text
+        p ここでは、各種大会の結果を掲載しています。
+      ArticleList(:summaryJson="summaryJson" :type="'results'")
     
 
 </template>
 
 <script>
 import summaryJson from '~/contents/summary_results.json';
+//component
+import MiniHeader from '~/components/MiniHeader.vue'
 import ArticleList from '~/components/ArticleList.vue';
+
 export default {
   components: {
+    MiniHeader,
     ArticleList
   },
   data(){
@@ -34,7 +40,18 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+@import "~/assets/style/normalize.scss";
+@import "~/assets/style/variables.scss";
+@import "~/assets/style/mixin.scss";
 
+.container {
+  padding: 24px 0;
+}
 
-<style lang="scss">
+.top_text {
+  @include noto-font(1.7rem);
+  padding: 12px 16px;
+}
+
 </style>

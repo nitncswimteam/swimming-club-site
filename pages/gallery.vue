@@ -94,13 +94,13 @@ export default {
 @import "~/assets/style/variables.scss";
 @import "~/assets/style/mixin.scss";
 
-.gallery{
-  margin-bottom: 60px;
+.container {
+  padding: 24px 0;
 }
 
 .top_text {
-  @include noto-font(1.8rem);
-  padding: 24px 16px 40px;
+  @include noto-font(1.7rem);
+  padding: 12px 16px;
 }
 
 .gallery_wrapper{
@@ -108,6 +108,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-self: stretch;
+  margin: 20px 0;
 }
 
 .gallery_detail{

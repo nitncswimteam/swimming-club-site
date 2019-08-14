@@ -1,24 +1,35 @@
 <template lang="pug">
 .news
-  header
-    .title
+  MiniHeader(:name="'NEWS'" :title="'お知らせ'")
   main
-    ArticleList(:summaryJson="summaryJson" :type="'news'")
-    .twitter_wrapper
-      <a class="twitter-timeline" data-lang="ja" data-height="1200" href="https://twitter.com/narakosenswim?ref_src=twsrc%5Etfw">Tweets by narakosenswim</a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+    .container
+      .news_wrapper
+        .left
+          .top_text 
+            p ここでは、本校水泳部に関するお知らせや、これから行われる大会についての説明・集合時間などを掲載しています。
+            p OB・OGの方の応援・ご参加等、お待ちしております！
+          ArticleList(:summaryJson="summaryJson" :type="'news'")
+        .twitter_wrapper
+          a(class="twitter-timeline" data-lang="ja" data-height="100%" :href="`https://twitter.com/${twitter_id}?ref_src=twsrc%5Etfw`") Tweets by {{twitter_id}}
+          script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
 </template>
 
 <script>
+//json
+import FooterJson from '~/assets/jsons/footer.json'
 import summaryJson from '~/contents/summary_news.json';
+//component
+import MiniHeader from '~/components/MiniHeader.vue'
 import ArticleList from '~/components/ArticleList.vue';
+
 export default {
   components: {
+    MiniHeader,
     ArticleList
   },
   data(){
     return {
+      twitter_id: FooterJson.twitter,
       summaryJson: summaryJson
     }
   },
@@ -38,8 +49,30 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~/assets/style/normalize.scss";
+@import "~/assets/style/variables.scss";
+@import "~/assets/style/mixin.scss";
+
+.container {
+  padding: 24px 0;
+}
+
+.news_wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.top_text {
+  @include noto-font(1.7rem);
+  padding: 12px 16px;
+}
+
 .twitter_wrapper{
   width: 400px;
   height: auto;
+  iframe{
+    min-height: 500px !important;
+  }
 }
 </style>

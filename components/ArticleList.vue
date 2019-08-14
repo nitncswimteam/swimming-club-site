@@ -1,15 +1,21 @@
 <template lang="pug">
-.articleList
-  .article
-    .article_year(v-for="(eachYear,eachYear_id) in articles"  :key="`year_${eachYear_id}`")
+.articles
+  .article_year(v-for="(eachYear,eachYear_id) in articles"  :key="`year_${eachYear_id}`")
+    .article_year_box
       .article_year_text {{eachYear.year}}
-      .article_list(v-for="(list, list_id) in eachYear.list" :key="`${type}list_${list_id}`" v-if="list.publish")
-        nuxt-link(:to="`/${type}_page/${list.sourceBase.slice(0,-3)}`")
-          .article_title {{list.title}}
+      .naminami: img(src="~/assets/imgs/wave_blue.svg").naminami_img
+    .article_list(v-for="(list, list_id) in eachYear.list" :key="`${type}list_${list_id}`" v-if="list.publish")
+      ArticleLink(:list="list" :type="type")
 </template>
 <script>
+//component
+import ArticleLink from '~/components/atoms/ArticleLink.vue';
+
 export default {
   props:["summaryJson","type"],
+  components:{
+    ArticleLink
+  },
   computed:{
     articles(){
       let summaryJsonMap = Object.entries(this.summaryJson.fileMap).map(([key, value]) => ({key, ...value}))
@@ -37,4 +43,28 @@ export default {
 @import "~/assets/style/normalize.scss";
 @import "~/assets/style/variables.scss";
 @import "~/assets/style/mixin.scss";
+
+.articles {
+  margin: 12px 0;
+  padding: 0 16px;
+}
+
+.article_year_box {
+  margin: 12px 0 24px;
+}
+
+.article_year_text {
+  @include noto-font(2.6rem);
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+.naminami{
+  margin-top: 4px;
+  .naminami_img{
+    display: block;
+    width: 92px;
+    height: 4px;
+  }
+}
+
 </style>
