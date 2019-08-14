@@ -72,13 +72,6 @@ export default {
   font-weight: bold;
   letter-spacing: .2rem;
 }
-.naminami{
-  margin-top: 4px;
-  .naminami_img{
-    display: block;
-    width: 92px;
-    height: 4px;
-  }
-}
+@import "~/assets/style/naminami.scss";
 
 </style>

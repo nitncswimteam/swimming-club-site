@@ -115,14 +115,7 @@ export default {
   font-weight: normal;
   padding-left: 20px;
 }
-.naminami{
-  margin-top: 4px;
-  .naminami_img{
-    display: block;
-    width: 92px;
-    height: 4px;
-  }
-}
+@import "~/assets/style/naminami.scss";
 
 .activities_list {
   margin: 4px 0;

@@ -52,15 +52,17 @@ export default {
 }
 .article_text {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .article_title{
   @include noto-font(2.2rem,$theme-blue);
   transition: .3s $bezier-ease-out;
+  margin-right: 25px;
 }
 .article_place {
-  padding-left: 32px;
   @include noto-font(1.8rem,$theme-blue);
   transition: .3s $bezier-ease-out;
+  margin-left: 2px;
 }
 </style>

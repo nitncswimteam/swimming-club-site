@@ -1,0 +1,29 @@
+.back{
+  display: flex;
+  .back_img {
+    width: 24px;
+    padding: 2px;
+    transition: .2s $bezier-ease-out;
+  }
+  .back_text {
+    padding-left: 12px;
+    color: $theme-blue;
+    transition: .2s $bezier-ease-out;
+  }
+  &:hover{
+    .back_img {
+      padding: 0px;
+    }
+    .back_text {
+      color: $theme-sky;
+    }
+  }
+}
+.one_page_top {
+  margin: 30px 0;
+  .title{
+    @include noto-font(3rem);
+    font-weight: normal;
+    margin: 0;
+  }
+}
