@@ -21,11 +21,13 @@ import summaryJson from '~/contents/summary_news.json';
 //component
 import MiniHeader from '~/components/MiniHeader.vue'
 import ArticleList from '~/components/ArticleList.vue';
+import Twitter from '~/components/atoms/Twitter.vue'
 
 export default {
   components: {
     MiniHeader,
-    ArticleList
+    ArticleList,
+    Twitter
   },
   data(){
     return {
@@ -69,8 +71,10 @@ export default {
 }
 
 .twitter_wrapper{
-  width: 400px;
+  width: 420px;
   height: auto;
+  border-left: 3px double $theme-blue;
+  padding-left: 12px;
   iframe{
     min-height: 500px !important;
   }

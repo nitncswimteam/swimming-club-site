@@ -34,7 +34,6 @@ export default {
           if(a<b) return 1;
           if(a>b) return -1;
         })
-      console.log(sortedEachYearsOne)
 
       let eachYearsSummary = []
       for (let i = 0; i < sortedEachYearsOne.length; i++) {
