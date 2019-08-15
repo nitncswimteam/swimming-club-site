@@ -1,59 +1,95 @@
 {
-  "update":"2018/11/01 現在",
+  "update":"2019/08/10 現在",
   "number":{
-    "all":29,
-    "male":21,
+    "all":25,
+    "male":18,
     "female":5,
     "othergender":0,
-    "manager":3,
+    "manager":2,
     "teacher":5
   },
   "list":[
     {
-      "name":"榊　和馬",
+      "name":"平松 詢也",
+      "grade":"3年",
+      "department":"電気工学科",
+      "position":"部長",
+      "comment":"席次をあげる"
+    },
+    {
+      "name":"冨岡 育輝",
       "grade":"3年",
       "department":"機械工学科",
-      "position":"部長"
+      "position":"副部長",
+      "comment":"Br専門"
     },
     {
-      "name":"玉井　雄策",
-      "grade":"3年",
+      "name":"西前 太郎",
+      "grade":"2年",
       "department":"機械工学科",
-      "position":"副部長"
+      "position":"副部長",
+      "comment":"僕の名前は北野結士です"
     },
     {
-      "name":"林　真由",
+      "name":"石原 一志",
       "grade":"3年",
+      "department":"情報工学科",
+      "position":"会計",
+      "comment":""
+    },
+    {
+      "name":"熊内 雄飛",
+      "grade":"2年",
+      "department":"電気工学科",
+      "position":"会計",
+      "comment":"水泳部の\"熊\"。しかしガリガリ、BMIは16"
+    },
+    {
+      "name":"福岡 万優",
+      "grade":"2年",
+      "department":"電気工学科",
+      "position":"MG",
+      "comment":"クイズ：正しいのは？A.真由 B.真夢 C.万優"
+    },
+    {
+      "name":"木村 茉奈",
+      "grade":"1年",
+      "department":"物質化学工学科",
+      "comment":"茶道部にも入ってます"
+    },
+    {
+      "name":"縄手 祥希",
+      "grade":"2年",
+      "department":"物質化学工学科",
+      "position":"サイト担当",
+      "comment":"魔女教、大罪司教-怠惰担当 ペテルギウス・ロマネコンティ..デス！！"
+    }
+    {
+      "name":"小山 遼",
+      "grade":"1年",
       "department":"機械工学科",
-      "position":"副部長/MG"
+      "position":"ブログ担当",
+      "comment":"朝自分で起きれるようにがんばります！"
     },
     {
-      "name":"誰かa",
-      "grade":"3年",
-      "department":"工学科",
-      "position":"会計"
+      "name":"鈴木 誠二郎",
+      "grade":"1年",
+      "department":"機械工学科",
+      "position":"ブログ担当",
+      "comment":"天然でねこ好きです"
     },
     {
-      "name":"誰かb",
-      "grade":"3年",
-      "department":"工学科",
-      "position":"MG"
+      "name":"大西 祥太",
+      "grade":"1年",
+      "department":"物質化学工学科",
+      "position":"ブログ担当",
+      "comment":"読書とゲームが好きな運動嫌い"
     },
     {
-      "name":"誰かc",
+      "name":"小田根 徹",
       "grade":"3年",
-      "department":"工学科"
-    },
-    {
-      "name":"誰かd",
-      "grade":"3年",
-      "department":"工学科"
-    },
-    {
-      "name":"誰かe",
-      "grade":"3年",
-      "department":"工学科",
-      "position":"ブログ担当"
+      "department":"電気工学科",
+      "comment":"オリックスバファローズがすきです"
     }
   ]
 }
