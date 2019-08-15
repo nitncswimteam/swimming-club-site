@@ -98,6 +98,9 @@ export default {
       opacity: 1;
       transform: translateY(0);
     }
+    .page_link_img {
+      padding: 3px;
+    }
   }
 }
 .one_page_link_a {
@@ -109,6 +112,7 @@ export default {
 .page_link_img {
   width: 24px;
   padding: 2px;
+  transition: .2s $bezier-ease-out;
   &_prev {
     margin-right: 8px;
   }
