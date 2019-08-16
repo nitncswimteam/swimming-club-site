@@ -4,7 +4,7 @@
 
 ## サイトの更新について
 
-Developers siteを作っているのでそちらをみてください。
+Developers siteを作っているのでそちらをみてください。↓↓↓
 
 https://nitncswim.netlify.com/develop
 

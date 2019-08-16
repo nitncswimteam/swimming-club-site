@@ -14,6 +14,7 @@ export default {
       title: title,
       meta: [
         { name: 'robots', content: 'noindex' },
+        { hid: 'description', name: 'description', content: "サイト更新担当者専用のサイトです。" }
       ]
     };
   }
