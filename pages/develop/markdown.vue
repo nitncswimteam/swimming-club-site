@@ -5,7 +5,6 @@
     h1 MarkDownリアルタイム確認ツール
     .top_text
       p MarkDown形式の記事を、リアルタイムで表示確認しながら記述できるツールです。
-      
 
 </template>
 <script>
