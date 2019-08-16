@@ -32,25 +32,26 @@ export default {
     flex-wrap: nowrap;
     align-items: center;
     background-color: $theme-blue;
-  }
-  .logo{
-    padding-left: 20px;
-    img.top-logo{
-      display: block;
-      width: auto;
-      height: 48px;
-      opacity: 1;
-      transition: .3s $bezier-ease-out;
-      &:hover{
-        opacity: .7;
+    .logo{
+      padding-left: 20px;
+      img.top-logo{
+        display: block;
+        width: auto;
+        height: 48px;
+        opacity: 1;
+        transition: .3s $bezier-ease-out;
+        &:hover{
+          opacity: .7;
+        }
       }
     }
+    .title {
+      padding-left: 30px;
+      @include noto-font(2.5rem);
+      color: #fff;
+    }
   }
-  .title {
-    padding-left: 30px;
-    @include noto-font(2.5rem);
-    color: #fff;
-  }
+  
   .nuxt{
     padding: 30px 0;
   }

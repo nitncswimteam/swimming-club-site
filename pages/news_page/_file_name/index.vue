@@ -67,10 +67,7 @@ export default {
     margin: 40px 0;
     font-size: 1.6rem;
     @import "~/assets/style/markdown.scss";
+    @import "assets/style/tomorrow-night.css";
   }
 }
-</style>
-
-<style>
-@import "assets/style/tomorrow-night.css";
 </style>

@@ -33,7 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: "~/plugins/vue-lazy-load", mode: 'client'}
+    { src: "~/plugins/vue-lazy-load", mode: 'client'},
+    { src: "~/plugins/vue-highlight", mode: 'client'}
   ],
 
   /*
@@ -45,7 +46,7 @@ export default {
   markdownit: {
     preset: 'default',
     linkify: true,
-    breaks: true,
+    breaks: false,
     html: true,
     typegraphy: true,
     injected: true,
