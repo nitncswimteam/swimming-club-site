@@ -6,12 +6,17 @@
     .top_text
       p MarkDown形式の記事を、リアルタイムで表示確認しながら記述できるツールです。
     .editor
+      MarkdownEditor
 
 </template>
 <script>
+import MarkdownEditor from "~/components/MarkdownEditor.vue"
 
 export default {
   layout: "develop",
+  components:{
+    MarkdownEditor
+  },
   data() {
     return {
       
