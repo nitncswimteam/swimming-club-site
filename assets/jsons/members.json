@@ -79,6 +79,36 @@
       "name":"小田根 徹",
       "grade":"3年",
       "department":"電気工学科"
+    },
+    {
+      "name":"松本 仁",
+      "grade":"3年",
+      "department":"電気工学科"
+    },
+    {
+      "name":"北野 結士",
+      "grade":"2年",
+      "department":"機械工学科"
+    },
+    {
+        "name":"頭鬼 崚真",
+      "grade":"2年",
+      "department":"電気工学科"
+    },
+    {
+      "name":"井上 水輝",
+      "grade":"2年",
+      "department":"電気工学科"
+    },
+    {
+      "name":"河崎 伸太朗",
+      "grade":"2年",
+      "department":"電子制御工学科"
+    },
+    {
+      "name":"谷奥 稔",
+      "grade":"2年",
+      "department":"情報工学科"
     }
   ]
 }
