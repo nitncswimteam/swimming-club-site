@@ -109,6 +109,41 @@
       "name":"谷奥 稔",
       "grade":"2年",
       "department":"情報工学科"
+    },
+    {
+      "name":"谷山 雄亮",
+      "grade":"1年",
+      "department":"電子制御工学科"
+    },
+    {
+      "name":"後藤 月望",
+      "grade":"1年",
+      "department":"情報工学科"
+    },
+    {
+      "name":"廣田 千歩",
+      "grade":"1年",
+      "department":"情報工学科"
+    },
+    {
+      "name":"橋本 悠希",
+      "grade":"1年",
+      "department":"情報工学科"
+    },
+    {
+      "name":"堀田 壮馬",
+      "grade":"1年",
+      "department":"物質化学工学科"
+    },
+    {
+      "name":"菊山 愛花",
+      "grade":"1年",
+      "department":"物質化学工学科"
+    },
+    {
+      "name":"勝眞 海音",
+      "grade":"1年",
+      "department":"物質化学工学科"
     }
   ]
 }
