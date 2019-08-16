@@ -24,7 +24,7 @@ mixin littleLinkButton(link,text)
               .link-button: a(:href="index.blog")
                 .lb-innerBox: .lb-innerText 水泳部ブログはこちら
           .photo
-            img(:src="`../image/top/${index.image_file_name}`")
+            GalleryImg(:src="`./image/top/${index.image_file_name}`" :alt="'TOP画像'")
     section.cushion
       img.cushion_img(src="~/assets/imgs/pool_course.png")
     section.little_results_news
@@ -52,8 +52,14 @@ mixin littleLinkButton(link,text)
 import summaryNews from '~/contents/summary_news.json';
 import summaryResults from '~/contents/summary_results.json';
 import index_json from '~/assets/jsons/index.json'
+//components
+import GalleryImg from '~/components/atoms/GalleryImg.vue'
+
 
 export default {
+  components:{
+    GalleryImg
+  },
   data(){
     return{
       index:index_json
