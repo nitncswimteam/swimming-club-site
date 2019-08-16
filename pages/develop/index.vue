@@ -11,11 +11,11 @@
         h3 Jsonアウトプットツール
         p 簡単な入力UIで入力したデータを、それぞれのJsonのファイル形式にして出力するツールです。
         ul.tools
-          li.tool: nuxt-link(to="/develop/index_json") index.json（トップのテキスト, トップ画像, Blogリンク）
-          li.tool: nuxt-link(to="/develop/about_json") about.json（トップのテキスト, 主な活動内容, 画像リスト）
-          li.tool: nuxt-link(to="/develop/members_json") members.json（メンバーの一覧）
-          li.tool: nuxt-link(to="/develop/gallery_json") gallery.json（写真とYoutube動画の一覧）
-          li.tool: nuxt-link(to="/develop/footer_json") footer.json（Twitter, Mail, Links）
+          li.tool: nuxt-link(to="/develop/json_tool/index_json") index.json（トップのテキスト, トップ画像, Blogリンク）
+          li.tool: nuxt-link(to="/develop/json_tool/about_json") about.json（トップのテキスト, 主な活動内容, 画像リスト）
+          li.tool: nuxt-link(to="/develop/json_tool/members_json") members.json（メンバーの一覧）
+          li.tool: nuxt-link(to="/develop/json_tool/gallery_json") gallery.json（写真とYoutube動画の一覧）
+          li.tool: nuxt-link(to="/develop/json_tool/footer_json") footer.json（Twitter, Mail, Links）
       .tool_category
         h3 MarkDownリアルタイム確認ツール
         p MarkDown形式の記事を、リアルタイムで表示確認しながら記述できるツールです。
