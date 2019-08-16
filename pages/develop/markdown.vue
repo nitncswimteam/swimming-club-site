@@ -5,13 +5,41 @@
     h1 MarkDownリアルタイム確認ツール
     .top_text
       p MarkDown形式の記事を、リアルタイムで表示確認しながら記述できるツールです。
+    .editor
+      editor(v-model="editorText" :options="editorOptions" :visible="editorVisible" height="500px" previewStyle="vertical")
+      viewer(:value="editorText")
 
 </template>
 <script>
+import {
+    Editor,
+    Viewer
+  } from '@toast-ui/vue-editor'
+
 export default {
-  layout: "develop"
+  layout: "develop",
+  components: {
+      'editor': Editor,
+      'viewer': Viewer
+    },
+    data() {
+      return {
+        editorText: '',
+        editorOptions: {
+          hideModeSwitch: true
+        },
+        editorVisible: true
+      }
+    }
 }
 </script>
+
+<style>
+@import "assets/style/tui-editor/tui-editor.css";
+@import "assets/style/tui-editor/tui-editor-contents.css";
+@import "assets/style/tui-editor/codemirror.css";
+</style>
+
 <style lang="scss" scoped>
 @import "~/assets/style/normalize.scss";
 @import "~/assets/style/variables.scss";
@@ -26,4 +54,7 @@ export default {
 }
 
 
+</style>
+<style>
+@import "assets/style/tomorrow-night.css";
 </style>
