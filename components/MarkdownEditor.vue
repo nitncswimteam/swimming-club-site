@@ -1,7 +1,7 @@
 <template lang="pug">
 .markdown_editor
-  button(@click="textareaInsert('# ')") h1
-  button(@click="textareaInsert('[text](https://)',1,4)") Link
+  button(@click="inputAssist('# ')") h1
+  button(@click="inputAssist('[text](https)',1,4)") Link
   
   .editor_wrapper
     .textarea
@@ -15,7 +15,8 @@
 export default {
   data(){
     return {
-      md_text:""
+      md_text:"",
+      assist_header:0
     }
   },
   mounted () {
@@ -54,7 +55,11 @@ export default {
         m.setAttribute("rows", line + 2);
       }
     },
-    textareaInsert(text,st,en){
+    inputAssist(text,st,en){
+      this.textareaInsert(text)
+      this.textareaCursor(text,st,en)
+    },
+    textareaInsert(text){
       var textarea = document.querySelector('textarea');
       var sentence = textarea.value;
       var len      = sentence.length;
@@ -64,18 +69,20 @@ export default {
       sentence = before + text + after;
       this.md_text = sentence;
       textarea.value = sentence;
-
+    },
+    textareaCursor(text,st,en){
+      var textarea = document.querySelector('textarea');
       textarea.focus();
       let st_cur,en_cur
       if(st == null && en == null){
-        st_cur = pos + text.length;
-        en_cur = pos + text.length;
+        st_cur = text.length;
+        en_cur = text.length;
       }else if(st != null && en == null){
-        st_cur = pos + st
-        en_cur = pos + st
+        st_cur = st
+        en_cur = st
       }else if(st != null && en != null){
-        st_cur = pos + st
-        en_cur = pos + st + en
+        st_cur = st
+        en_cur = st + en
       }
       textarea.setSelectionRange(st_cur, en_cur);
     }
