@@ -3,7 +3,7 @@
   .editor_wrapper
     textarea(v-model="md_text" placeholder="markdownをかく").md_textarea
     .preview
-      .preview_html {{md_text}}
+      .preview_html(v-html="$md.render(md_text)")
 </template>
 <script>
 export default {

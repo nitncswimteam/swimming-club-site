@@ -40,7 +40,20 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/markdownit'
   ],
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    html: true,
+    typegraphy: true,
+    injected: true,
+    use: [
+      'markdown-it-meta', 
+      'markdown-it-highlightjs',
+    ]
+  },
 
   /*
   ** Build configuration
