@@ -1,7 +1,11 @@
 <template lang="pug">
 .markdown_editor
-  button(@click="inputAssist('# ')") h1
-  button(@click="inputAssist('[text](https)',1,4)") Link
+  .assist_btns
+    button.assist_btn(@click="inputAssist('# ')") h1
+  button.assist_btn(@click="inputAssist('[text](https)',1,4)") Link
+  button.assist_btn(@click="inputAssist(assist.img,17,4)") img
+  button.assist_btn(@click="inputAssist(assist.img_ad,23,4)") imgAd
+  button.assist_btn(@click="inputAssist(assist.table,0,1)") 表
   
   .editor_wrapper
     .textarea
@@ -16,7 +20,12 @@ export default {
   data(){
     return {
       md_text:"",
-      assist_header:0
+      assist_header:0,
+      assist:{
+        img: '![](/image/other/file.png)',
+        img_ad: '<img src="/image/other/file.png" alt="" style="width:400px;">',
+        table :`a | b | c\n---|---|---\na1 | b1 | c1\na2 | b2 | c2`
+      }
     }
   },
   mounted () {
@@ -56,8 +65,8 @@ export default {
       }
     },
     inputAssist(text,st,en){
-      this.textareaInsert(text)
-      this.textareaCursor(text,st,en)
+      let pos = this.textareaInsert(text)
+      this.textareaCursor(pos,text,st,en)
     },
     textareaInsert(text){
       var textarea = document.querySelector('textarea');
@@ -69,20 +78,21 @@ export default {
       sentence = before + text + after;
       this.md_text = sentence;
       textarea.value = sentence;
+      return pos
     },
-    textareaCursor(text,st,en){
+    textareaCursor(pos,text,st,en){
       var textarea = document.querySelector('textarea');
       textarea.focus();
       let st_cur,en_cur
       if(st == null && en == null){
-        st_cur = text.length;
-        en_cur = text.length;
+        st_cur = pos + text.length;
+        en_cur = pos + text.length;
       }else if(st != null && en == null){
-        st_cur = st
-        en_cur = st
+        st_cur = pos + st
+        en_cur = pos + st
       }else if(st != null && en != null){
-        st_cur = st
-        en_cur = st + en
+        st_cur = pos + st
+        en_cur = pos + st + en
       }
       textarea.setSelectionRange(st_cur, en_cur);
     }
