@@ -20,7 +20,7 @@
         h3 MarkDownリアルタイム確認ツール
         p MarkDown形式の記事を、リアルタイムで表示確認しながら記述できるツールです。
         ul.tools
-          li.tool: nuxt-link(to="/develop/markdown") 0000-00-00_xxxxx.md
+          li.tool: nuxt-link(to="/develop/markdown") Markdown Viewer
 </template>
 <script>
 export default {
