@@ -28,7 +28,7 @@ export default {
   */
   css: [
     'tui-editor/dist/tui-editor.css',
-    'tui-editor/dist/tui-editor-contents.css',
+    'tui-editor/dist/tui-editor-contents.css', 
     'codemirror/lib/codemirror.css'
   ],
 
