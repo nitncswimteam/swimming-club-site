@@ -82,3 +82,7 @@ dist
 
 # Service worker
 sw.*
+
+contents/_output_file
+contents/summary_news.json
+contents/summary_results.json

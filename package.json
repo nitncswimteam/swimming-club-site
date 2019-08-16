@@ -5,16 +5,19 @@
   "author": "chige12",
   "private": true,
   "scripts": {
-    "post": "rm -r contents/_output_file && processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news output --watch > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results output --watch > contents/summary_results.json",
-    "dev": "rm -r contents/_output_file && processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt",
+    "dev": "rm -r contents/_output_file & processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news --html true > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results --html true > contents/summary_results.json && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "rm -r contents/_output_file && processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt generate"
+    "generate": "rm -r contents/_output_file & processmd contents/news/**/*.md --stdout --outputDir contents/_output_file/news > contents/summary_news.json && processmd contents/results/**/*.md --stdout --outputDir contents/_output_file/results > contents/summary_results.json && nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.6",
     "cross-env": "^5.2.0",
+    "markdown-it-highlightjs": "^3.0.0",
+    "markdown-it-meta": "^0.0.1",
     "nuxt": "^2.8.1",
-    "processmd": "^4.4.2",
+    "processmd": "nitncswimteam/processmd",
+    "vue-highlightjs": "^1.3.3",
     "vue-lazyload": "^1.3.2",
     "vue-magic-grid": "^0.0.4"
   },
