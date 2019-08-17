@@ -6516,9 +6516,10 @@ process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
-processmd@nitncswimteam/processmd:
+processmd@^4.4.2:
   version "4.4.2"
-  resolved "https://codeload.github.com/nitncswimteam/processmd/tar.gz/6bd64def663f0618f4b463db1c88a186e8fc9059"
+  resolved "https://registry.yarnpkg.com/processmd/-/processmd-4.4.2.tgz#60eda1bac844fe45320d0bce7fe71f722e383911"
+  integrity sha512-/xJKzdY1tn9CYAW+OLEaK6Bdor4P1vetcQO8f51QMkFuKkmMd6BNuHknFq1zjCX0Cmj/+eFsLSyQ1tkqchI4PQ==
   dependencies:
     globby "^9.0.0"
     highlight.js "^9.12.0"
