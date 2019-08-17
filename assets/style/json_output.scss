@@ -34,6 +34,7 @@ input {
   border: 1px solid $theme-blue;
   padding: 12px;
   width: 100%;
+  line-height: 17px;
 }
 
 textarea {
@@ -155,4 +156,11 @@ textarea {
   opacity: 1;
   height: 30px;
   transform: translateY(-31px);
+}
+
+input:focus,button:focus,textarea:focus {
+  outline: 3px solid rgba($theme-sky,.5);
+}
+a:link:focus {
+  text-decoration: underline rgba($theme-sky,.5);
 }

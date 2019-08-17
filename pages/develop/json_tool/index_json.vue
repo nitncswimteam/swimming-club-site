@@ -4,20 +4,21 @@
     nuxt-link(to="/develop") トップに戻る
     h1 Jsonアウトプットツール indexページ
     .top_text
-      p 簡単な入力UIで入力したデータを、それぞれのJsonのファイル形式にして出力するツールです。
+      p 左側の入力欄で各項目を入力すると、右側にjsonが出力されます。編集が完了したら、コピーボタンでjsonをコピーし、Githubリンクから更新しましょう。再読み込みすると編集前のデータに戻ります。
+        a(href="https://github.com/nitncswimteam/swimming-club-site/blob/temporary/static/image/top" target="_blank") ＞画像アップ先
     .editor_wrapper
       .editor
         .property_wrapper
           h3.property トップのテキスト
-          textarea(v-model="intro_text" placeholder="トップのテキスト" autofocus).textarea_intro_text
+          textarea(v-model="intro_text" placeholder="トップのテキスト").textarea_intro_text
         .property_wrapper
           h3.property トップの画像ファイル名
-          input(v-model="image_file_name" placeholder="image.png" autofocus).input_image
+          input(v-model="image_file_name" placeholder="image.png").input_image
           .preview(v-if="image_file_name")
             .preview_img: GalleryImg(:src="`../../image/top/${image_file_name}`" :alt="'TOP画像'").preview_img_com
         .property_wrapper
           h3.property ブログリンク
-          input(v-model="blog" placeholder="https://" autofocus).input_blog
+          input(v-model="blog" placeholder="https://").input_blog
           .preview(v-if="blog")
             .preview_link: a(:href="blog" target="_blank") {{blog}}
       .json_output
