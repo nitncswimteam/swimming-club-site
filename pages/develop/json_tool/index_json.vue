@@ -21,7 +21,14 @@
           .preview(v-if="blog")
             .preview_link: a(:href="blog" target="_blank") {{blog}}
       .json_output
-        h3.property Json Output
+        .output_buttons_wrapper
+          .op_btn(@click="jsonCopy()")
+            span コピー
+            .copy_button(:class="{'copy_success': copy_success}") {{copy_text}}
+          a(href="https://github.com/nitncswimteam/swimming-club-site/blob/temporary/assets/jsons/index.json" target="_blank").op_btn
+            img(src="~/assets/imgs/edit_icon/link.svg").output_img
+            span Githubへ
+        h3.property index.json
         textarea(v-model="OutPut").textarea_output
     
 </template>
@@ -42,12 +49,36 @@ export default {
       image_file_name:"",
       blog:"",
       json: index_json,
+      output: "",
+      copy_success:false,
+      copy_text : ""
     }
   },
   mounted(){
     this.intro_text = this.json.intro_text.join(`\n`)
     this.image_file_name = this.json.image_file_name
     this.blog = this.json.blog
+  },
+  methods:{
+    jsonCopy(e){
+      navigator.clipboard
+        .writeText(this.output)
+        .then(() => {
+          this.copy_text = "コピーしました"
+          this.copy_success = true;
+          setTimeout(() => {
+            this.copy_success = false
+          }, 1300)
+        })
+        .catch(e => {
+          this.copy_text = "コピー失敗"
+          this.copy_success = true;
+          setTimeout(() => {
+            this.copy_success = false
+          }, 1300)
+          console.error(e)
+        })
+    }
   },
   computed:{
     OutPut(){
@@ -56,8 +87,8 @@ export default {
       output_object.image_file_name = this.image_file_name
       output_object.blog = this.blog
       let escape = JSON.stringify(output_object,undefined,2)
+      this.output = escape
       return escape
-      console.log(output_object)
     }
   }
 }
@@ -67,7 +98,4 @@ export default {
 @import "~/assets/style/variables.scss";
 @import "~/assets/style/mixin.scss";
 @import "~/assets/style/json_output.scss";
-
-
-
 </style>
