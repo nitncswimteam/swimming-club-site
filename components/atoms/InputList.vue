@@ -56,6 +56,11 @@ export default {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  &:hover{
+    input {
+      background: rgba($theme-blue,.2);
+    }
+  }
 }
 
 .input_list_wrapper {

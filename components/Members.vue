@@ -5,19 +5,19 @@
       tr.members_number_tr
         td 部員数（現役）
         td {{members.number.all}} 名
-      tr(v-if="!(members.number.male==0 || members.number.female==0)").members_number_tr
+      tr(v-if="!(Number(members.number.male)==0 || Number(members.number.female)==0)").members_number_tr
         td 男子選手
         td {{members.number.male}} 名
-      tr(v-if="!(members.number.male==0 || members.number.female==0)").members_number_tr
+      tr(v-if="!(Number(members.number.male)==0 || Number(members.number.female)==0)").members_number_tr
         td 女子選手
         td {{members.number.female}} 名
-      tr(v-if="!(members.number.othergender==0 || members.number.male==0 || members.number.female==0)").members_number_tr
+      tr(v-if="!(Number(members.number.othergender)==0 || Number(members.number).male==0 || Number(members.number.female)==0)").members_number_tr
         td その他の選手
         td {{members.number.othergender}} 名
       tr(v-if="members.number.manager!==0").members_number_tr
         td マネージャー(MG)
         td {{members.number.manager}} 名
-      tr(v-if="members.number.teacher!==0").members_number_tr
+      tr(v-if="Number(members.number.teacher)!==0").members_number_tr
         td 顧問教員
         td {{members.number.teacher}} 名
   
