@@ -3,6 +3,7 @@ title: 2019年度近畿高専大会結果報告
 place: 神戸高専プール
 date: 7月14日
 publish: true
+new_article: true
 
 created_at: 2019-08-16T09:20:00
 ---
