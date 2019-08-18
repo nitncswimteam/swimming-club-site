@@ -5,7 +5,7 @@ date: 7月14日
 publish: true
 new_article: true
 
-created_at: 2019-08-16
+created_at: 2019-08-1
 ---
 
 7/14(Sat.)に神戸高専で行われた近畿高専大会の結果報告です。
