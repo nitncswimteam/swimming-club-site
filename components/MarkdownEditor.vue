@@ -211,7 +211,9 @@ export default {
   @import "~/assets/style/markdown.scss";
   @import "assets/style/tomorrow-night.css";
 }
-code.markdown.hljs {
+</style>
+<style lang="css">
+.textarea_view code.markdown.hljs {
   min-height: 300px;
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
