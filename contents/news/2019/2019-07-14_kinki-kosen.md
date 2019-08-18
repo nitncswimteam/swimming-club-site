@@ -2,7 +2,7 @@
 title: 【7/14】近畿高専大会が開催されます！
 place: 神戸高専
 date: 7/14(Sun.)
-publish: false
+publish: true
 
 created_at: 2019-07-14
 ---
