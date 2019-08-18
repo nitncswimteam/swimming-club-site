@@ -34,7 +34,9 @@ mixin littleLinkButton(link,text)
           ul.lists
             li.list(v-for="(results_data,results_key) in resultsDatas" :key="`topresult_${results_key}`")
               nuxt-link(:to="`/results_page/${results_data.sourceBase.slice(0,-3)}`").list_wrapper
-                .created_at {{results_data.created_at.split('T')[0].split('-').join('/')}} 作成
+                .article_sub_info
+                  .created_at {{results_data.created_at.split('T')[0].split('-').join('/')}} 作成
+                  .article_new(v-if="results_data.new_article") NEW!
                 .article_title {{results_data.title}}
           .read_more: +littleLinkButton('/results','READ MORE')
         .little_lists.little_news
@@ -42,7 +44,9 @@ mixin littleLinkButton(link,text)
           ul.lists
             li.list(v-for="(news_data,news_key) in newsDatas" :key="`topresult_${news_key}`")
               nuxt-link(:to="`/news_page/${news_data.sourceBase.slice(0,-3)}`").list_wrapper
-                .created_at {{news_data.created_at.split('T')[0].split('-').join('/')}} 作成
+                .article_sub_info
+                  .created_at {{news_data.created_at.split('T')[0].split('-').join('/')}} 作成
+                  .article_new(v-if="news_data.new_article") NEW!
                 .article_title {{news_data.title}}
           .read_more: +littleLinkButton('/news','READ MORE')
 </template>
@@ -205,11 +209,23 @@ section {
       color: $theme-sky;
     }
   }
-  .created_at{
-    line-height: 3rem;
+  .article_sub_info {
+    display: flex;
+    flex-wrap: nowrap;
     padding-right: 30px;
   }
+  .created_at{
+    line-height: 3rem;
+  }
+  .article_new {
+    line-height: 3rem;
+    font-weight: bold;
+    color: #f00f66;
+    padding-left: 12px;
+    margin-right: -18px;
+  }
   .article_title{
+    display: inline-block;
     font-size: 2rem;
     line-height: 3rem;
   }
