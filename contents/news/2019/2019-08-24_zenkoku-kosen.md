@@ -3,6 +3,7 @@ title: 【8/24,25】全国高専大会が開催されます！
 place: ひろしんビックウェーブ（広島市）
 date: 8/24(Sat.)、8/25(Sun.)
 publish: true
+new_article: true
 
 created_at: 2019-08-16T22:30:00
 ---
