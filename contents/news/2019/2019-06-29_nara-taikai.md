@@ -2,7 +2,8 @@
 title: 【6/29,30】奈良県選手権水泳競技大会が開催されます！
 place: スイムピア奈良
 date: 6/29(Sat.)・6/30(Sun.)
-publish: false
+publish: true
+new_article: false
 
 created_at: 2019-06-29
 ---

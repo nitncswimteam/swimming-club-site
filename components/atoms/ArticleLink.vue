@@ -1,7 +1,9 @@
 <template lang="pug">
 .article_link_box
   nuxt-link(:to="`/${type}_page/${list.sourceBase.slice(0,-3)}`").article_link
-    .article_created_at {{createdAt}} 作成
+    .article_sub_info
+      .article_created_at {{createdAt}} 作成
+      .article_new(v-if="list.new_article") NEW!
     .article_text
       .article_title {{list.title}}
       .article_place(v-if="list.place") @{{list.place}}
@@ -50,6 +52,17 @@ export default {
     }
   }
 }
+.article_sub_info{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.article_new {
+  padding-left: 20px;
+  font-weight: bold;
+  color: #f00f66;
+}
+
+
 .article_text {
   display: flex;
   flex-wrap: wrap;
