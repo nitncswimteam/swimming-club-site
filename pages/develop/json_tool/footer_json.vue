@@ -23,7 +23,7 @@
           .op_btn(@click="jsonCopy()")
             span コピー
             .copy_button(:class="{'copy_success': copy_success}") {{copy_text}}
-          a(href="https://github.com/nitncswimteam/swimming-club-site/blob/temporary/assets/jsons/index.json" target="_blank").op_btn
+          a(href="https://github.com/nitncswimteam/swimming-club-site/blob/temporary/assets/jsons/footer.json" target="_blank").op_btn
             img(src="~/assets/imgs/edit_icon/link.svg").output_img
             span Githubへ
         h3.property index.json
@@ -47,7 +47,7 @@ export default {
     return {
       twitter:"",
       e_mail:"",
-      links:"",
+      links:[],
       json: footer_json,
       output: "",
       copy_success:false,
