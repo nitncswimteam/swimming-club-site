@@ -201,10 +201,6 @@ export default {
     }
   }
 
-</style>
-
-<style lang="scss">
-@import "~/assets/style/variables.scss";
 .md_preview {
   width: 50%;
   display: block;
@@ -215,15 +211,14 @@ export default {
   @import "~/assets/style/markdown.scss";
   @import "assets/style/tomorrow-night.css";
 }
-
-code.markdown.hljs{
-    min-height: 300px;
-    font-family: monospace, monospace;
-    _font-family: 'courier new', monospace;
-    background: transparent !important;
-    font-size: 1.7rem !important;
-    letter-spacing: 0;
-    line-height: 1.6;
-    padding: 12px !important;
-  }
+code.markdown.hljs {
+  min-height: 300px;
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  background: transparent !important;
+  font-size: 1.7rem !important;
+  letter-spacing: 0;
+  line-height: 1.6;
+  padding: 12px !important;
+}
 </style>
