@@ -10,10 +10,14 @@
       .editor
         .property_wrapper
           h3.property ギャラリーリスト
-          .gallery_list(v-for="(gal, gal_id) in gallery" :key="`dev_gal_${gal_key}`")
+          .gallery_list(v-for="(gal, gal_id) in gallery" :key="`dev_gal_${gal_id}`")
+            .list_updown
+              button.inlist_btn(@click="listUp(gal_id)" v-if="gal_id!=0"): .up <
+              button.inlist_btn(@click="listDown(gal_id)" v-if="gal_id!=gallery.length-1"): .down <
+              button.inlist_btn(@click="listDelete(gal_id)") ×
             .gal_property
               .gal_property_text タイプ
-              .gal_select_box: select(v-model="gal.type").gal_select
+              .gal_select_box: select(v-model="gal.type" @change="changeType(gal_id,gal.type)").gal_select
                 option youtube
                 option image
             .gal_property(v-if="gal.type=='youtube'")
@@ -36,6 +40,7 @@
                 .preview_img: img(:src="`https://img.youtube.com/vi/${gal.video_id}/sddefault.jpg`" :alt="gal.title").preview_img_com
             .preview(v-if="gal.type=='image' && gal.file")
               .preview_img: GalleryImg(:src="`../../image/gallery/${gal.file}`" :alt="gal.title").preview_img_com
+          .add_list: button(@click="addList()").add_list_button +
       .json_output
         .output_buttons_wrapper
           .op_btn(@click="jsonCopy()")
@@ -90,6 +95,42 @@ export default {
           }, 1300)
           console.error(e)
         })
+    },
+    listUp(id){
+      let content = this.gallery[id]
+      let deleteArray = this.gallery.filter((n,i) => i !== id);
+      deleteArray.splice(id-1,0,content);
+      this.gallery = deleteArray
+    },
+    listDown(id){
+      let content = this.gallery[id]
+      let deleteArray = this.gallery.filter((n,i) => i !== id);
+      deleteArray.splice(id+1,0,content);
+      this.gallery = deleteArray
+    },
+    listDelete(id){
+      let deleteArray = this.gallery.filter((n,i) => i !== id);
+      this.gallery = deleteArray
+    },
+    addList(){
+      let obj = {}
+      obj.type = 'image'
+      obj.file = ""
+      obj.video_id = null
+      obj.title = ""
+      obj.body = ""
+      obj.date = ""
+      this.gallery = this.gallery.concat(obj)
+    },
+    changeType(id,type) {
+      if(type=='image'){
+        delete this.gallery[id].video_id
+        this.gallery[id].file = ""
+      }
+      if(type=='youtube'){
+        delete this.gallery[id].file
+        this.gallery[id].video_id = ""
+      }
     }
   },
   computed:{
@@ -110,12 +151,63 @@ export default {
 @import "~/assets/style/json_output.scss";
 
 .gallery_list {
+  position: relative;
   background: rgba($theme-blue,.1);
   padding: 16px;
   margin-bottom: 12px;
   &:last-child {
     margin: 0;
   }
+}
+
+.list_updown {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px * 3;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+button.inlist_btn{
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 6px;
+  transition: .2s $bezier-ease-out;
+  margin: 2px;
+  cursor: pointer;
+  &:hover{
+    background: $theme-blue;
+    color: #fff;
+  }
+}
+.add_list {
+  margin: 4px 0;
+  margin-left: 24px;
+}
+.add_list_button {
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  border: none;
+  border-radius: 15px;
+  background: $theme-blue;
+  color: #fff;
+  transition: .2s $bezier-ease-out;
+  cursor: pointer;
+  &:hover{
+    background: rgba($theme-blue,.7å);
+  }
+}
+
+.up {
+  transform: rotateZ(90deg);
+}
+.down {
+  transform: rotateZ(-90deg);
 }
 
 .gal_property {
