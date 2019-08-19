@@ -66,10 +66,7 @@ export default {
   .body{
     margin: 40px 0;
     @import "~/assets/style/markdown.scss";
+    @import "assets/style/tomorrow-night.css";
   }
 }
-</style>
-
-<style>
-@import "assets/style/tomorrow-night.css";
 </style>

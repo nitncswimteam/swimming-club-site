@@ -27,21 +27,34 @@ export default {
   ** Global CSS
   */
   css: [
-
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: "~/plugins/vue-lazy-load", mode: 'client'}
+    { src: "~/plugins/vue-lazy-load", mode: 'client'},
+    { src: "~/plugins/vue-highlight", mode: 'client'}
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/markdownit'
   ],
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: false,
+    html: true,
+    typegraphy: true,
+    injected: true,
+    use: [
+      'markdown-it-meta', 
+      'markdown-it-highlightjs',
+    ]
+  },
 
   /*
   ** Build configuration

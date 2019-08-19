@@ -4,16 +4,29 @@
       "title": "記事のタイトル(テスト)",
       "place": null,
       "date": null,
-      "publish": true,
+      "publish": false,
       "created_at": "2019-08-06T00:00:00.000Z",
       "dir": "contents/_output_file/results",
       "base": "2019-08-06_hoge.json",
       "ext": ".json",
       "sourceBase": "2019-08-06_hoge.md",
       "sourceExt": ".md"
+    },
+    "contents/_output_file/results/2019-08-15_kosentaikai.json": {
+      "title": "2019年度近畿高専大会結果報告",
+      "place": "神戸高専プール",
+      "date": "7月14日",
+      "publish": true,
+      "created_at": "2019-08-16T09:20:00.000Z",
+      "dir": "contents/_output_file/results",
+      "base": "2019-08-15_kosentaikai.json",
+      "ext": ".json",
+      "sourceBase": "2019-08-15_kosentaikai.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "contents/results/2019/2019-08-06_hoge.md"
+    "contents/results/2019/2019-08-06_hoge.md",
+    "contents/results/2019/2019-08-15_kosentaikai.md"
   ]
 }

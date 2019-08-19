@@ -2,6 +2,12 @@
 
 > My legendary Nuxt.js project
 
+## サイトの更新について
+
+Developers siteを作っているのでそちらをみてください。↓↓↓
+
+https://nitncswim.netlify.com/develop
+
 ## Build Setup
 
 ``` bash
