@@ -5,7 +5,7 @@ date: 6/29(Sat.)、6/30(Sun.)
 publish: true
 new_article: false
 
-created_at: 2019-06-29
+created_at: 2019-06-29T01:00:00
 ---
 
 ## 奈良県選手権水泳競技大会 2019
