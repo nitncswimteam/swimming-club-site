@@ -1,8 +1,8 @@
 {
-  "update":"2019/08/10 現在",
+  "update":"2019/09/07 現在",
   "number":{
-    "all":25,
-    "male":18,
+    "all":26,
+    "male":19,
     "female":5,
     "othergender":0,
     "manager":2,
@@ -132,6 +132,11 @@
     },
     {
       "name":"堀田 壮馬",
+      "grade":"1年",
+      "department":"物質化学工学科"
+    },
+    {
+      "name":"藤原 優輔",
       "grade":"1年",
       "department":"物質化学工学科"
     },
