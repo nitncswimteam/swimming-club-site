@@ -23,7 +23,3 @@ created_at: 2019-10-22
 ## 関連リンク
 
 - [奈良高専祭2019](https://www.nara-k.ac.jp/kousensai/)
-
- "file": "udon.jpg",
-      "discription": "うどんのイメージ"
-  
