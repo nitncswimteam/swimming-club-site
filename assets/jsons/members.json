@@ -111,6 +111,11 @@
       "department":"情報工学科"
     },
     {
+      "name":"藤原 優輔",
+      "grade":"1年",
+      "department":"物質化学工学科"
+    },
+    {
       "name":"谷山 雄亮",
       "grade":"1年",
       "department":"電子制御工学科"
@@ -132,11 +137,6 @@
     },
     {
       "name":"堀田 壮馬",
-      "grade":"1年",
-      "department":"物質化学工学科"
-    },
-    {
-      "name":"藤原 優輔",
       "grade":"1年",
       "department":"物質化学工学科"
     },
