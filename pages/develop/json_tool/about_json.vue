@@ -101,7 +101,6 @@ export default {
         obj.discription = ""
         this.photo = this.photo.concat(obj)
       }
-
     }
   },
   computed:{
