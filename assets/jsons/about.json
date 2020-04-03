@@ -13,19 +13,19 @@
   "main_activities":[
     {
       "name":"奈良県選手権水泳大会",
-      "discription":"6/29(Sat.)、6/30(Sun.) @スイムピアなら"
+      "discription":""
     },
     {
       "name":"近畿高専大会",
-      "discription":"7/14(Sun.) @神戸高専プール"
+      "discription":"7/12(Sun.)"
     },
     {
       "name":"全国高専大会",
-      "discription":"8/24(Sat.)、25(Sun.) @ひろしんビックウェーブ（広島市）"
+      "discription":"8/29(Sat.)、30(Sun.)"
     },
     {
-      "name":"高専祭 @奈良高専",
-      "discription":"11/2(Sat.)、11/3(Sun.) ことしもうどん屋を開店します！"
+      "name":"高専祭",
+      "discription":"@奈良高専"
     }
   ],
   "photo":[
