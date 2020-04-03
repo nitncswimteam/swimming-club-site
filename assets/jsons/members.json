@@ -1,5 +1,5 @@
 {
-  "update":"2019/09/07 現在",
+  "update":"2020/04/03 現在",
   "number":{
     "all":26,
     "male":19,
@@ -11,143 +11,143 @@
   "list":[
     {
       "name":"平松 詢也",
-      "grade":"3年",
+      "grade":"4年",
       "department":"電気工学科",
       "position":"部長"
     },
     {
       "name":"冨岡 育輝",
-      "grade":"3年",
+      "grade":"4年",
       "department":"機械工学科",
       "position":"副部長"
     },
     {
       "name":"西前 太郎",
-      "grade":"2年",
+      "grade":"3年",
       "department":"機械工学科",
       "position":"副部長"
     },
     {
       "name":"石原 一志",
-      "grade":"3年",
+      "grade":"4年",
       "department":"情報工学科",
       "position":"会計"
     },
     {
       "name":"熊内 雄飛",
-      "grade":"2年",
+      "grade":"3年",
       "department":"電気工学科",
       "position":"会計"
     },
     {
       "name":"福岡 万優",
-      "grade":"2年",
+      "grade":"3年",
       "department":"電気工学科",
       "position":"MG"
     },
     {
       "name":"木村 茉奈",
-      "grade":"1年",
+      "grade":"2年",
       "department":"物質化学工学科",
       "position":"MG"
     },
     {
       "name":"縄手 祥希",
-      "grade":"2年",
+      "grade":"3年",
       "department":"物質化学工学科",
       "position":"サイト担当"
     },
     {
       "name":"小山 遼",
-      "grade":"1年",
+      "grade":"2年",
       "department":"機械工学科",
       "position":"ブログ担当"
     },
     {
       "name":"鈴木 誠二郎",
-      "grade":"1年",
+      "grade":"2年",
       "department":"機械工学科",
       "position":"ブログ担当"
     },
     {
       "name":"大西 祥太",
-      "grade":"1年",
+      "grade":"2年",
       "department":"物質化学工学科",
       "position":"ブログ担当"
     },
     {
       "name":"小田根 徹",
-      "grade":"3年",
+      "grade":"4年",
       "department":"電気工学科"
     },
     {
       "name":"松本 仁",
-      "grade":"3年",
+      "grade":"4年",
       "department":"電気工学科"
     },
     {
       "name":"北野 結士",
-      "grade":"2年",
+      "grade":"3年",
       "department":"機械工学科"
     },
     {
         "name":"頭鬼 崚真",
-      "grade":"2年",
+      "grade":"3年",
       "department":"電気工学科"
     },
     {
       "name":"井上 水輝",
-      "grade":"2年",
+      "grade":"3年",
       "department":"電気工学科"
     },
     {
       "name":"河崎 伸太朗",
-      "grade":"2年",
+      "grade":"3年",
       "department":"電子制御工学科"
     },
     {
       "name":"谷奥 稔",
-      "grade":"2年",
+      "grade":"3年",
       "department":"情報工学科"
     },
     {
       "name":"藤原 優輔",
-      "grade":"1年",
+      "grade":"2年",
       "department":"機械工学科"
     },
     {
       "name":"谷山 雄亮",
-      "grade":"1年",
+      "grade":"2年",
       "department":"電子制御工学科"
     },
     {
       "name":"後藤 月望",
-      "grade":"1年",
+      "grade":"2年",
       "department":"情報工学科"
     },
     {
       "name":"廣田 千歩",
-      "grade":"1年",
+      "grade":"2年",
       "department":"情報工学科"
     },
     {
       "name":"橋本 悠希",
-      "grade":"1年",
+      "grade":"2年",
       "department":"情報工学科"
     },
     {
       "name":"堀田 壮馬",
-      "grade":"1年",
+      "grade":"2年",
       "department":"物質化学工学科"
     },
     {
       "name":"菊山 愛花",
-      "grade":"1年",
+      "grade":"2年",
       "department":"物質化学工学科"
     },
     {
       "name":"勝眞 海音",
-      "grade":"1年",
+      "grade":"2年",
       "department":"物質化学工学科"
     }
   ]
