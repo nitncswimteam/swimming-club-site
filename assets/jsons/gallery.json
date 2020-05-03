@@ -1,10 +1,10 @@
 [
   {
     "type": "youtube",
-    "video_id": "HqBVtnb-dy0",
-    "title": "奈良高専水泳部紹介ムービー2019",
+    "video_id": "f8xIMBvlFoE",
+    "title": "奈良高専水泳部紹介ムービー2020",
     "body": "youtubeにて公開している紹介ムービーです！ ※音が出ます",
-    "date": "2019/04/12"
+    "date": "2019/05/03"
   },
   {
     "type": "image",
@@ -90,14 +90,7 @@
     "body": "卒業生との交流は大切にしていきたいですね",
     "date": "2019/08/12"
   },
-  {
-    "type": "youtube",
-    "video_id": "yP39CmkQxI0",
-    "title": "奈良高専水泳部紹介ムービー2018",
-    "body": "youtubeにて公開している紹介ムービーです！ ※音が出ます",
-    "date": "2019/04/07"
-  },
-  {
+{
     "type": "image",
     "file": "20190810_gasshuku_kawaii.jpg",
     "title": "合宿@奈良高専",
@@ -110,5 +103,19 @@
     "title": "うどん屋九尾",
     "body": "水泳部は高専祭でうどんを販売!!",
     "date": "2019/11/03"
+  },
+ {
+    "type": "youtube",
+    "video_id": "HqBVtnb-dy0",
+    "title": "奈良高専水泳部紹介ムービー2019",
+    "body": "youtubeにて公開している紹介ムービーです！ ※音が出ます",
+    "date": "2019/04/12"
+  },
+ {
+    "type": "youtube",
+    "video_id": "yP39CmkQxI0",
+    "title": "奈良高専水泳部紹介ムービー2018",
+    "body": "youtubeにて公開している紹介ムービーです！ ※音が出ます",
+    "date": "2019/04/07"
   }
 ]
