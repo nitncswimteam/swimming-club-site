@@ -17,8 +17,10 @@ export default {
     GalleryImg
   },
   data() {
-    youtube_thumbnail_1: 'https://i.ytimg.com/vi/',
-    youtube_thumbnail_2: '/hqdefault.jpg'
+    return {
+      youtube_thumbnail_1: 'https://i.ytimg.com/vi/',
+      youtube_thumbnail_2: '/hqdefault.jpg'
+    }
   },
   props: ["photo","id"],
   methods:{
