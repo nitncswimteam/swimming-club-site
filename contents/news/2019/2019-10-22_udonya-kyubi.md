@@ -3,7 +3,7 @@ title: 【11/2,3】「うどん屋九尾」今年も開店です！
 place: 奈良高専
 date: 7/14(Sun.)
 publish: true
-new_article: false
+new_article: true
 
 created_at: 2019-10-22
 ---
