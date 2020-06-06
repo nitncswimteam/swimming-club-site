@@ -1,5 +1,5 @@
 ---
-title: 新型コロナウイルス感染症(COVID-19)の感染拡大による大会の中止
+title: 新型コロナウイルスの感染拡大による大会の中止
 place: 
 date: 
 publish: true
