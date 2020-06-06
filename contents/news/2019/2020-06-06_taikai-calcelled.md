@@ -5,7 +5,7 @@ date:
 publish: true
 new_article: true
 
-created_at: 2019-06-06T14:00:00
+created_at: 2020-06-06T14:00:00
 ---
 
 # 第26回 全国高等専門学校水泳競技大会 並びに 令和2年度 奈良県選手権水泳競技大会 中止
