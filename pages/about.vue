@@ -11,7 +11,7 @@
           .main_activities
             h2.header2
               .header2_wrapper
-                .header2_title 今後の主な活動
+                .header2_title 今後の主な活動~2020~
               .naminami: img(src="~/assets/imgs/wave_blue.svg").naminami_img
             .contents_wrapper
               ul.activities_lists
