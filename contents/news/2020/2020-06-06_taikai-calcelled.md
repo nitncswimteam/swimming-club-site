@@ -20,4 +20,3 @@ created_at: 2020-06-06T14:00:00
 
 - [夏季体育大会中止のお知らせ(全国高等専門学校連合会HP)](https://www.kosen-all.or.jp/information/2020/05/post-12.html)
 - [競技会の中止について(奈良県水泳連盟HP)](http://nara-swim.jp/wp-content/uploads/2020/04/11914d3c5c6b708a6631ffd00953cff5.pdf)
-
