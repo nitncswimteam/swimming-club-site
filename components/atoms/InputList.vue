@@ -10,6 +10,11 @@
     .input_list_wrapper(v-if="id=='photo'")
       input(v-model="list.file" placeholder="ファイル名")
       input(v-model="list.discription" placeholder="説明").input_photo_disc
+    .input_list_wrapper(v-if="id=='links'")
+      input(v-model="list.url" placeholder="https://")
+      input(v-model="list.text" placeholder="リンク名").input_links_disc
+      .preview(v-if="list.url && list.text")
+        .preview_link: a(:href="list.url" target="_blank") {{list.text}} （{{list.url}}）
     .preview(v-if="id=='photo'")
       .preview_img.preview_img_photo: GalleryImg(:src="`/image/about/${list.file}`" :alt="'TOP画像'").preview_img_com_photo
     .delete_button
@@ -138,6 +143,11 @@ button.inlist_btn{
 }
 .input_photo_disc {
   border-top: none;
+  background: rgba($theme-blue,.05)
+}
+//links
+.input_links_disc {
+  border-top: 0;
   background: rgba($theme-blue,.05)
 }
 </style>

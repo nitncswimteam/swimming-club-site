@@ -4,7 +4,7 @@
       figure.card_img(v-if="photo.type=='image'")
         GalleryImg(:src="`/image/gallery/${photo.file}`", :alt="photo.title").image
       .card_img(v-if="photo.type=='youtube'")
-        img(:src="`https://img.youtube.com/vi/${photo.video_id}/sddefault.jpg`" :alt="photo.title").image
+        img(:src="`${youtube_thumbnail_1}${photo.video_id}${youtube_thumbnail_2}`" :alt="photo.title").image
       .card_content
         .title {{photo.title}}
         .body {{photo.body}}
@@ -15,6 +15,12 @@ import GalleryImg from '~/components/atoms/GalleryImg.vue'
 export default {
   components:{
     GalleryImg
+  },
+  data() {
+    return {
+      youtube_thumbnail_1: 'https://i.ytimg.com/vi/',
+      youtube_thumbnail_2: '/hqdefault.jpg'
+    }
   },
   props: ["photo","id"],
   methods:{
