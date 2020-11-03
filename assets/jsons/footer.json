@@ -1,18 +1,22 @@
 {
-  "twitter":"narakosenswim",
-  "e_mail":"narakosenswimming◇gmail.com",
-  "links":[
+  "twitter": "narakosenswim",
+  "e_mail": "narakosenswimming◇gmail.com",
+  "links": [
     {
-      "url":"https://www.nara-k.ac.jp/",
-      "text":"国立奈良工業高等専門学校"
+      "url": "https://www.nara-k.ac.jp/",
+      "text": "国立奈良工業高等専門学校"
     },
     {
-      "url":"https://www.swim.or.jp/",
-      "text":"公益財団法人 日本水泳連盟"
+      "url": "https://www.instagram.com/nitnc_swimming/",
+      "text": "奈良高専水泳部 Instagram"
     },
     {
-      "url":"http://www.swim-record.com/",
-      "text":"スイムレコードどっとこむ"
+      "url": "https://www.swim.or.jp/",
+      "text": "公益財団法人 日本水泳連盟"
+    },
+    {
+      "url": "http://www.swim-record.com/",
+      "text": "スイムレコードどっとこむ"
     }
   ]
 }
