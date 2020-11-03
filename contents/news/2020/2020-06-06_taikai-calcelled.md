@@ -3,7 +3,7 @@ title: 新型コロナウイルスの感染拡大による大会の中止
 place: 
 date: 
 publish: true
-new_article: true
+new_article: false
 
 created_at: 2020-06-06T14:00:00
 ---

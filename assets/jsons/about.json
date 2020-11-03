@@ -1,5 +1,5 @@
 {
-  "top_text":[
+  "top_text": [
     [
       "楽しく活動しながら、水泳技術の向上を目指しています！",
       "夏シーズンはたくさん泳ぎ、冬シーズンは陸に上がってワイワイ楽しく筋トレ等をしています。"
@@ -10,36 +10,36 @@
       "私たちと一緒に、青春の１ページをつくりませんか？"
     ]
   ],
-  "main_activities":[
+  "main_activities": [
     {
-      "name":"奈良県選手権水泳大会",
-      "discription":"中止"
+      "name": "奈良県選手権水泳大会",
+      "discription": "中止"
     },
     {
-      "name":"近畿高専大会",
-      "discription":"中止"
+      "name": "近畿高専大会",
+      "discription": "中止"
     },
     {
-      "name":"全国高専大会",
-      "discription":"中止"
+      "name": "全国高専大会",
+      "discription": "中止"
     },
     {
-      "name":"高専祭",
-      "discription":""
+      "name": "高専祭",
+      "discription": "令和2年11月03日 @オンライン"
     }
   ],
-  "photo":[
+  "photo": [
     {
-      "file":"20180626_suichu.jpeg",
-      "discription":"学校のプールでの水中写真"
+      "file": "20180626_suichu.jpeg",
+      "discription": "学校のプールでの水中写真"
     },
     {
-      "file":"P1160784.JPG",
-      "discription":"学校のプールサイドでの写真"
+      "file": "P1160784.JPG",
+      "discription": "学校のプールサイドでの写真"
     },
     {
-      "file":"P1160635.JPG",
-      "discription":"学校のプールサイドで休憩中の写真"
+      "file": "P1160635.JPG",
+      "discription": "学校のプールサイドで休憩中の写真"
     }
   ]
 }
