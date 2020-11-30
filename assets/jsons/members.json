@@ -1,8 +1,8 @@
 {
-  "update": "2020/11/03 現在",
+  "update": "2020/11/30 現在",
   "number": {
-    "all": 26,
-    "male": 19,
+    "all": "31",
+    "male": "24",
     "female": 5,
     "othergender": 0,
     "manager": 2,
@@ -124,6 +124,36 @@
       "name": "堀田 壮馬",
       "grade": "2年",
       "department": "物質化学工学科"
+    },
+    {
+      "name": "上代 稜真",
+      "grade": "1年",
+      "department": "機械工学科",
+      "position": ""
+    },
+    {
+      "name": "田中 将斗",
+      "grade": "1年",
+      "department": "機械工学科",
+      "position": ""
+    },
+    {
+      "name": "今元 賢",
+      "grade": "1年",
+      "department": "電気工学科",
+      "position": ""
+    },
+    {
+      "name": "前田 稀央",
+      "grade": "1年",
+      "department": "電気工学科",
+      "position": ""
+    },
+    {
+      "name": "水谷 龍星",
+      "grade": "1年",
+      "department": "電子制御工学科",
+      "position": ""
     }
   ]
 }
