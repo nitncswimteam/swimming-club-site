@@ -3,7 +3,7 @@ title: 高専祭科展模擬店チャンピオンを獲得！！
 place: 
 date: 
 publish: true
-new_article: true
+new_article: false
 
 created_at: 2020-11-28T01:00:00
 ---
