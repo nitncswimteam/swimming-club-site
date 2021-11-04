@@ -3,7 +3,7 @@ title: 2年ぶりに近畿高専大会が開催されます
 place: 明石高専
 date: 
 publish: true
-new_article: true
+new_article: false
 
 created_at: 2021-07-03T22:00:00
 ---
