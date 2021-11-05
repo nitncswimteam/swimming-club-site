@@ -1,5 +1,4 @@
-{
-  "gallery": [
+[
     {
       "type": "youtube",
       "video_id": "f8xIMBvlFoE",
@@ -119,5 +118,4 @@
       "body": "youtubeにて公開している紹介ムービーです！ ※音が出ます",
       "date": "2019/04/12"
     }
-  ]
-}
+]
